@@ -2,7 +2,7 @@ package model;
 import java.time.LocalDateTime;
 import java.util.*;
 
-class Transaction {
+public class Transaction {
 
     private String type;
     private double amount;
@@ -12,5 +12,10 @@ class Transaction {
         this.type = type;
         this.amount = amount;
         this.timestamp = LocalDateTime.now();
+    }
+
+    @Override
+    public String toString() {
+        return type + " | Amount: " + amount + " | Time: " + timestamp;
     }
 }
